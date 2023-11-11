@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "telegram-bot-api-async-webhooks-test"
+version = "0.1.0"
+description = ""
+authors = ["Andrew Yatsura <andrewyazura203@proton.me>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.104.1"
+python-dotenv = "^1.0.0"
+pydantic-settings = "^2.0.3"
+gunicorn = "^21.2.0"
+uvicorn = {extras = ["standard"], version = "^0.24.0.post1"}
+httpx = "^0.25.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+ruff = "^0.1.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

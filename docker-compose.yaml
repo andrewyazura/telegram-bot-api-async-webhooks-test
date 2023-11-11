@@ -1,0 +1,13 @@
+services:
+  bot:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./src:/code/src
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    command: ["http", "bot:80"]
+    env_file:
+      - .env
